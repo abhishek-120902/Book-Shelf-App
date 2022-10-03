@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gpb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/loginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/logo"
+            app:lottie_repeatCount="10"
+            app:lottie_repeatMode="restart" />
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/bungee_regular"
+            android:text="@string/login_slogan"
+            android:textColor="@color/cyan"
+            android:textSize="30sp"
+            android:transitionName="logo_bottom" />
+
+        <TextView
+            android:id="@+id/loginToContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:fontFamily="@font/antic_regular"
+            android:text="@string/login_title"
+            android:textColor="@color/yellow"
+            android:textSize="20sp"
+            android:transitionName="slogan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailLogin"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:errorIconTint="@color/yellow"
+                app:errorTextColor="@color/yellow"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLogIn"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textColorHint="@color/white"
+                android:transitionName="password_tran"
+                app:boxStrokeColor="@color/white"
+                app:errorIconTint="@color/yellow"
+                app:errorTextColor="@color/yellow"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/white"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/rememberMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:text="@string/remember_me"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/forgotPassword"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="#00000000"
+                    android:elevation="0dp"
+                    android:text="@string/forgot_password"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:transitionName="forgot_password_tran" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_bg"
+                android:text="@string/login"
+                android:textColor="@color/background"
+                android:transitionName="btn_tran" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginSignUp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:text="@string/sign_up_login_slogan"
+                android:textColor="@color/white"
+                android:transitionName="login_signup_tran" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        gpb:colors="@array/prog_bar_colors"
+        gpb:type="nexus_rotation_cross" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlBookShelf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookShelfActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBookShelf"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/background"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        app:title="Book Shelf"
+        app:titleMarginStart="25dp"
+        app:titleTextColor="@color/white" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarBookShelf"
+        android:paddingHorizontal="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBookShelf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBookFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/background"
+        android:elevation="10dp"
+        android:src="@drawable/ic_add_book" />
+
+</RelativeLayout>

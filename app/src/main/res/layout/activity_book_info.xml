@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBookInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:title="Book Details"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarBookInfo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/bookCover"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher" />
+
+            <RelativeLayout
+                android:id="@+id/booksContents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookCover">
+
+                <!--Titles-->
+                <TextView
+                    android:id="@+id/bookNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amethysta"
+                    android:padding="6dp"
+                    android:text="Book Name"
+                    android:textColor="@color/background"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/publisherNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookName"
+                    android:fontFamily="@font/amethysta"
+                    android:padding="6dp"
+                    android:text="Publisher Name"
+                    android:textColor="@color/background"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/publishedDateTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/publisherName"
+                    android:fontFamily="@font/amethysta"
+                    android:padding="6dp"
+                    android:text="Published Date"
+                    android:textColor="@color/background"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/noOfPagesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/publishedDate"
+                    android:fontFamily="@font/amethysta"
+                    android:padding="6dp"
+                    android:text="Number of Pages"
+                    android:textColor="@color/background"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/descTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookNoOfPages"
+                    android:fontFamily="@font/amethysta"
+                    android:padding="6dp"
+                    android:text="Description"
+                    android:textColor="@color/background"
+                    android:textSize="18sp" />
+
+                <!--Contents-->
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/bookNameTitle"
+                    android:fontFamily="@font/techfont"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/publisherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookName"
+                    android:layout_marginStart="41dp"
+                    android:layout_toEndOf="@+id/publisherNameTitle"
+                    android:fontFamily="@font/techfont"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/publishedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/publisherName"
+                    android:layout_marginStart="48dp"
+                    android:layout_toEndOf="@+id/publishedDateTitle"
+                    android:fontFamily="@font/techfont"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/bookNoOfPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/publishedDate"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/noOfPagesTitle"
+                    android:fontFamily="@font/techfont"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/bookDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descTitle"
+                    android:justificationMode="inter_word"
+                    android:padding="6dp"
+                    android:text="Book Description is Here"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:targetApi="o" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/shareBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/booksContents"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="-10dp"
+                android:background="@drawable/share_btn_bg"
+                android:elevation="30dp"
+                android:text="Share"
+                android:textColor="@color/background" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addToShelfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shareBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/add_remove_shelf_button_bg"
+                android:elevation="30dp"
+                android:text="Add To Shelf"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/removeFromShelfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shareBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/add_remove_shelf_button_bg"
+                android:elevation="30dp"
+                android:text="Remove From Shelf"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

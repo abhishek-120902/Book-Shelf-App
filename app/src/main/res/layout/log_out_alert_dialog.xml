@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/antic_regular"
+        android:text="Log Out"
+        android:textColor="@color/background"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/techfont"
+        android:text="Are you sure you want to log out?"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/yesLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/add_remove_shelf_button_bg"
+        android:fontFamily="@font/amethysta"
+        android:text="Yes"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/noLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/add_remove_shelf_button_bg"
+        android:fontFamily="@font/amethysta"
+        android:text="No"
+        android:textColor="@color/white" />
+
+</LinearLayout>

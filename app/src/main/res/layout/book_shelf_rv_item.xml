@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:outlineSpotShadowColor="@color/background"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/rvBookCover"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/rvBookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:text="Book Title"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/rvPublisherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publisher Name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

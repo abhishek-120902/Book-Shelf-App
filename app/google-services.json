@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "996835667977",
+    "project_id": "graphic-mission-324605",
+    "storage_bucket": "graphic-mission-324605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996835667977:android:9f2594cf9a9c62612d48d8",
+        "android_client_info": {
+          "package_name": "com.abhishek.bookshelf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996835667977-nenetqsuibg6cibt3r75j13c0ebu0k2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoolWiRikOHfTuvXXaZ9yWBfU6yXr7FVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996835667977-nenetqsuibg6cibt3r75j13c0ebu0k2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

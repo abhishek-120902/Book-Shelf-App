@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SearchBookActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSearchBook"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/background"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        app:title="Search Book"
+        app:titleMarginStart="25dp"
+        app:titleTextColor="@color/white" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarSearchBook"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_view_bg"
+        android:elevation="10dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search here" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:layout_marginHorizontal="20dp" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerSearchBook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchView"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+            <include layout="@layout/shimmer_placeholder_layout" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

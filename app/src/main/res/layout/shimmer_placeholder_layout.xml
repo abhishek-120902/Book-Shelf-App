@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/idIVbook"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:background="@color/shimmer_colour"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/idTVBookTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVbook"
+            android:background="@color/shimmer_colour"
+            android:padding="3dp" />
+
+        <TextView
+            android:id="@+id/idTVpublisher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVBookTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/idIVbook"
+            android:background="@color/shimmer_colour"
+            android:padding="3dp" />
+
+        <TextView
+            android:id="@+id/idTVPageCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVpublisher"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/idIVbook"
+            android:background="@color/shimmer_colour"
+            android:padding="3dp" />
+
+        <TextView
+            android:id="@+id/idTVDate"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVPageCount"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:background="@color/shimmer_colour"
+            android:padding="3dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
